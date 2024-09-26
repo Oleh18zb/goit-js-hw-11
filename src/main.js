@@ -13,6 +13,7 @@ form.addEventListener('submit', async (event) => {
   }
 
   showLoader();
+  gallery.innerHTML = '';
 
   try {
     const data = await fetchImages(query);
@@ -24,6 +25,7 @@ form.addEventListener('submit', async (event) => {
     }
   } catch (error) {
     hideLoader();
+    gallery.innerHTML = '';
     showError('Failed to fetch images. Please try again later.');
   }
 });
