@@ -1,8 +1,10 @@
+
 import { fetchImages } from './js/pixabay-api.js';
 import { renderImages, showError, showLoader, hideLoader } from './js/render-functions.js';
 
 const form = document.querySelector('.search-form');
 const input = document.querySelector('.search-input');
+const gallery = document.querySelector('.gallery');
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
